@@ -1,24 +1,25 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background: #2f363e;
 }
-#time{
+
+#time {
     display: flex;
     gap: 40px;
     color: #fff;
 }
 
-#time .circle{
+#time .circle {
     position: relative;
     width: 150px;
     height: 150px;
@@ -26,33 +27,36 @@ body{
     justify-content: center;
     align-items: center;
 }
-#time .circle svg{
+
+#time .circle svg {
     position: relative;
     width: 150px;
     height: 150px;
     transform: rotate(270deg);
 }
-#time .circle svg circle{
+
+#time .circle svg circle {
     width: 100%;
     height: 100%;
     fill: transparent;
     stroke: #191919;
     stroke-width: 4;
-    transform: translate(5px,5px);
+    transform: translate(5px, 5px);
 }
-#time .circle svg circle:nth-child(2){
+
+#time .circle svg circle:nth-child(2) {
     stroke: var(--clr);
     stroke-dasharray: 440;
 }
 
-#time div{
+#time div {
     position: absolute;
     text-align: center;
     font-weight: 500;
     font-size: 1.5em;
 }
 
-#time div span{
+#time div span {
     position: absolute;
     transform: translateX(-50%) translateY(-10px);
     font-size: 0.3em;
@@ -61,12 +65,13 @@ body{
     text-transform: uppercase;
 }
 
-#time .ap{
+#time .ap {
     position: relative;
     font-size: 1em;
     transform: translateX(-20px);
 }
-.dots{
+
+.dots {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -74,7 +79,8 @@ body{
     display: flex;
     justify-content: center;
 }
-.dots::before{
+
+.dots::before {
     content: '';
     position: absolute;
     top: -3px;
@@ -86,14 +92,16 @@ body{
 
 }
 
-@media screen and (max-width:770px ) {
-    /* body{
-        max-width: 100%;
-        padding: 30px 20px;
+@media screen and (max-width:770px) {
+    #time {
+        flex-direction: column;
     }
-    #time{
+
+    #time .ap {
+        position: relative;
+        align-items: center;
         display: flex;
-        gap: 40px;
-    } */
-   
+        flex-direction: column-reverse;
+        transform: translateX(0);
     }
+}
